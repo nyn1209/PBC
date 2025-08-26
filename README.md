@@ -56,3 +56,17 @@ pip install pandas numpy lifelines scikit-learn matplotlib seaborn jupyter
 # Run
 jupyter notebook  # open and run health.ipynb
 
+# What to Look For
+
+- Cleaning: missing-value strategy, outlier checks, standardized units & labels.
+- Survival: KM curves by stage/sex; confidence bands; log-rank p-values.
+- Cox PH: hazard ratios with confidence intervals; proportionality diagnostics.
+- Classification: simple logistic model with AUROC/AUPRC and calibration.
+- Segmentation: K-Means profiles (e.g., high bilirubin / low albumin) to support triage.
+- Reporting: figures + a concise narrative aligned to the dashboard KPIs.
+
+# Roadmap
+- Time-varying covariates for Cox (extended model)
+- External validation & bootstrap CIs
+- SHAP/ICE for interpretability
+- Optional Docker & CI
