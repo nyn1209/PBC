@@ -1,5 +1,5 @@
 # PBC
-PBC survival analysis on 312 patients — Python pipeline for data cleaning, Kaplan–Meier &amp; Cox PH, K-Means risk stratification, and a clinician-friendly Tableau dashboard.
+PBC survival analysis on 312 patients — Python pipeline for data cleaning, Kaplan–Meier &amp; Cox PH, K-Means risk stratification, and a clinician-friendly Tableau dashboard. \n
 Languages: Python, SQL (optional) · Libs: pandas, numpy, lifelines, scikit-learn, matplotlib
 Viz: Tableau
 # 1. Project Goals
@@ -12,7 +12,7 @@ Viz: Tableau
 Key takeaways from my run: disease stage dominated hazard; the Cox model reached strong discriminatory power (ROC-AUC ≈ 0.82 on hold-out), and K-Means surfaced a high-bilirubin/low-albumin cluster aligning with higher risk.
 
 # 2. Repository Structure
-PBC\\
+PBC \n
 ├─ data/
 │  ├─ raw/           # place original CSV here (not tracked)
 │  └─ processed/     # cleaned datasets saved here
