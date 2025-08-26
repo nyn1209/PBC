@@ -9,9 +9,10 @@ PBC survival analysis on 312 patients — Python pipeline for data cleaning, Kap
 
 ## Contents
 - **`health.ipynb`** — the entire workflow (run top-to-bottom).
-- `data/` — place input CSV here (not tracked).
-- `requirements.txt` — minimal dependencies (optional).
-
+- `data/`
+  - **`healthcare.csv`**
+  - **`healthcare.xlsx`** – input Excel with 4 sheets 
+- `requirements.txt`
 ---
 
 ## Goals
@@ -28,6 +29,26 @@ PBC survival analysis on 312 patients — Python pipeline for data cleaning, Kap
 # Create and activate env
 python -m venv .venv && source .venv/bin/activate   # (Windows) .venv\Scripts\activate
 python -m pip install --upgrade pip
+
+# Install basics
+pip install pandas numpy lifelines scikit-learn matplotlib seaborn jupyter
+
+# Run
+jupyter notebook  # open and run health.ipynb
+> The notebook reads these sheets to **enforce schema**, **run quality checks**, and **document assumptions** before modeling.
+```
+
+## Quick load snippet
+```python
+import pandas as pd
+path = "data/raw/healthcare.xlsx"
+
+df      = pd.read_excel(path, sheet_name="Healthcare")
+dict_df = pd.read_excel(path, sheet_name="Data Dictionary")
+biz_df  = pd.read_excel(path, sheet_name="Business Understanding")
+qa_df   = pd.read_excel(path, sheet_name="Data Quality Assessment")
+```
+
 
 # Install basics
 pip install pandas numpy lifelines scikit-learn matplotlib seaborn jupyter
